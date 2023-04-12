@@ -40,7 +40,7 @@ def artist_listeners():
     url = 'https://kworb.net/spotify/listeners.html'
     df = pd.read_html(url)[0]
 
-    dt = f"NDP={datetime.now().strftime('%Y-%m-%d')}"
+    dt = f"{datetime.now().strftime('%Y-%m-%d')}"
     df.insert(0, 'Date', dt)
 
     file_name = f'{dt}-spotify_artist_monthly_listeners.parquet'
