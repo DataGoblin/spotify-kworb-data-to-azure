@@ -30,6 +30,7 @@ def artist_streams():
 
     dt = f"{datetime.now().strftime('%Y-%m-%d')}"
     df.insert(0, 'Date', dt)
+    df.insert(0, 'Rank', df.index + 1)
     
     file_name = f'{dt}-spotify_top_streamed_artists.parquet'
 
@@ -42,6 +43,7 @@ def artist_listeners():
 
     dt = f"{datetime.now().strftime('%Y-%m-%d')}"
     df.insert(0, 'Date', dt)
+    df.insert(0, 'Rank', df.index + 1)
 
     file_name = f'{dt}-spotify_artist_monthly_listeners.parquet'
 
@@ -54,6 +56,7 @@ def song_streams():
 
     dt = f"{datetime.now().strftime('%Y-%m-%d')}"
     df.insert(0, 'Date', dt)
+    df.insert(0, 'Rank', df.index + 1)
 
     file_name = f'{dt}-spotify_top_song_streams.parquet'
 
